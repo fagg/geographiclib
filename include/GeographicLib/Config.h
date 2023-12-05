@@ -1,13 +1,13 @@
-#define GEOGRAPHICLIB_VERSION_STRING "@PROJECT_VERSION@"
-#define GEOGRAPHICLIB_VERSION_MAJOR @PROJECT_VERSION_MAJOR@
-#define GEOGRAPHICLIB_VERSION_MINOR @PROJECT_VERSION_MINOR@
-#define GEOGRAPHICLIB_VERSION_PATCH @PROJECT_VERSION_PATCH@
-#define GEOGRAPHICLIB_DATA "@GEOGRAPHICLIB_DATA@"
+#define GEOGRAPHICLIB_VERSION_STRING "2.3"
+#define GEOGRAPHICLIB_VERSION_MAJOR 2
+#define GEOGRAPHICLIB_VERSION_MINOR 3
+#define GEOGRAPHICLIB_VERSION_PATCH 0
+#define GEOGRAPHICLIB_DATA "/usr/local/share/GeographicLib"
 
 // These are macros which affect the building of the library
-#cmakedefine01 GEOGRAPHICLIB_HAVE_LONG_DOUBLE
-#cmakedefine01 GEOGRAPHICLIB_WORDS_BIGENDIAN
-#define GEOGRAPHICLIB_PRECISION @GEOGRAPHICLIB_PRECISION@
+#define GEOGRAPHICLIB_HAVE_LONG_DOUBLE 1
+#define GEOGRAPHICLIB_WORDS_BIGENDIAN 0
+#define GEOGRAPHICLIB_PRECISION 2
 
 // Specify whether GeographicLib is a shared or static library.  When compiling
 // under Visual Studio it is necessary to specify whether GeographicLib is a
@@ -21,5 +21,5 @@
 // and the user's code were built with cmake version 2.8.11 (which introduced
 // the command target_compile_definitions) or later.
 #if !defined(GEOGRAPHICLIB_SHARED_LIB)
-#define GEOGRAPHICLIB_SHARED_LIB @GEOGRAPHICLIB_LIB_TYPE_VAL@
+#define GEOGRAPHICLIB_SHARED_LIB 0
 #endif
